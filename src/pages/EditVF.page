@@ -1,0 +1,15 @@
+<apex:page standardController="Account" tabstyle="account" sidebar="false"
+           extensions="Task5OtherTask" >
+    <apex:form >
+        <apex:pageBlock >
+            <apex:pageBlockSection >
+                <apex:outputField value="{!Account.Name}" label="Account name"/>
+                <apex:outputText value="{!Account.Industry}"> {!acc.Industry}</apex:outputText>
+                <apex:outputText >{!acc.id}</apex:outputText>
+            </apex:pageBlockSection>
+           <apex:pageBlockSection >
+            		<apex:commandButton value="Edit" action="{!getReference}"/>
+               </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

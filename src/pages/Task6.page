@@ -1,0 +1,39 @@
+<!--
+ - Created by valeriyartemenko on 10.04.17.
+ -->
+
+<apex:page id="Task6" controller="ControllerCustmObject" >
+    <apex:form >
+    <apex:pageBlock id = "Rend">
+        <apex:pageBlockSection >
+            <apex:inputField value="{!comparison.IndexOne__c}"/>
+            <apex:inputField value="{!comparison.IndexTwo__c}"/>
+        </apex:pageBlockSection>
+        <apex:pageBlockSection rendered="{!IF(comparison.IndexOne__c != comparison.IndexTwo__c,true,false)}">
+            <apex:inputField   value="{!comparison.result__c}"/>
+        </apex:pageBlockSection>
+
+        <apex:pageBlockSection >
+            <apex:actionSupport  event="onkeypress" >
+             <apex:commandButton value="Save" action="{!save}" reRender="Rend" />
+            </apex:actionSupport>
+            <!--<script>-->
+                <!--function onKeyup_TxtFieldcom(e)-->
+                <!--{-->
+                    <!--var keynum;-->
+                    <!--if(window.event)-->
+                    <!--{-->
+                        <!--keynum = e.keyCode;-->
+                    <!--}-->
+                    <!--if(keynum == 13)-->
+                    <!--{-->
+                        <!--redirct();-->
+                        <!--return false;-->
+                    <!--}-->
+                <!--}-->
+            <!--</script>-->
+        </apex:pageBlockSection>
+    </apex:pageBlock>
+    </apex:form>
+</apex:page>
+

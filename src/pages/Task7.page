@@ -1,0 +1,22 @@
+<!--
+ - Created by valeriyartemenko on 11.04.17.
+ -->
+
+<apex:page standardController="Account" extensions="ViewController">
+    <apex:form>
+        <apex:pageBlock>
+            <apex:pageBlockSection title="Account Section">
+                <apex:outputText value="Select Account"  />
+                <apex:selectList value="{!selVal}" size="3">
+                    <apex:selectOptions value="{!AllAccount}" />
+                </apex:selectList>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+
+        <apex:pageBlock title="Delete Account">
+            <apex:pageBlockButtons location="top">
+                <apex:commandButton value="Delete Account" action="{!DeleteChecked}" />
+            </apex:pageBlockButtons>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

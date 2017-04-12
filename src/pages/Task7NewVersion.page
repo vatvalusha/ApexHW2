@@ -1,0 +1,19 @@
+<!--
+ - Created by valeriyartemenko on 11.04.17.
+ -->
+<apex:page controller="controllerClassOtherVariant">
+    <apex:form >
+        <apex:pageBlock >
+            <apex:pageBlockButtons >
+                <apex:commandButton value="Process Selected" action="{!processSelected}"/>
+            </apex:pageBlockButtons>
+            <apex:pageBlockTable value="{!accounts}" var="c">
+                <apex:column >
+                    <apex:inputCheckbox value="{!c.Test__c}"/>
+                </apex:column>
+                <apex:column value="{!c.Name}" />
+                <apex:column value="{!c.Test__c}"/>
+            </apex:pageBlockTable>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

@@ -1,0 +1,9 @@
+<!--
+ - Created by valeriyartemenko on 09.04.17.
+ -->
+<apex:page showHeader="false" sideBar="false" controller="CustmController">
+    <apex:form >
+               Input Nama:    <apex:inputText value="{!Name }"/>
+               Your Name Is:  <apex:outputText value="{!Name}"/>
+    </apex:form>
+</apex:page>
